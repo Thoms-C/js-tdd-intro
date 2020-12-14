@@ -17,7 +17,7 @@ function capitalizeFirstLetters(input){
 
 assert.strictEqual(capitalizeFirstLetters.length, 1);
 
-assert.strictEqual(capitalizeFirstLetters('table'), 'Table')
+assert.strictEqual(capitalizeFirstLetters('toto aime le code'), 'Toto Aime Le Code')
 
 assert.strictEqual(capitalizeFirstLetters('a'), 'A');
 
