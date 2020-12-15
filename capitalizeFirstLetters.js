@@ -1,24 +1,16 @@
-const assert = require("assert");
+function capitalizeFirstLetters(input) {
+  let words = input.toLowerCase().split(" ");
 
-function capitalizeFirstLetters(input){
-    let words = input.toLowerCase().split(' ');
+  const array = [];
 
-    let array = [];
+  words.forEach((word) => {
+    let firstLetter = word.charAt(0).toUpperCase();
 
-    words.forEach(word=>{
-        let firstLetter = word.chatAt(0).toUpperCase();
+    let replacement = word.replace(word.charAt(0), firstLetter);
 
-        let replacement = word.replace(word.chatAt(0), firstLetter);
-
-        array.push(replacement);
-    });
-    console.log(array.join(' '));
+    array.push(replacement);
+  });
+  return array.join(" ");
 }
 
-assert.strictEqual(capitalizeFirstLetters.length, 1);
-
-assert.strictEqual(capitalizeFirstLetters('toto aime le code'), 'Toto Aime Le Code')
-
-assert.strictEqual(capitalizeFirstLetters('a'), 'A');
-
-assert.strictEqual(capitalizeFirstLetters(''), '');
+module.exports = capitalizeFirstLetters;
